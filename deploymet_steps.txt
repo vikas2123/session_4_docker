@@ -1,0 +1,50 @@
+Create the Docker File 
+
+in termianal to run the docker image 
+
+#docker build -t mark1 .
+
+we r building the docker image with name as mark1 and . indicates the current working directory
+
+#docker image ls 
+REPOSITORY                          TAG       IMAGE ID       CREATED          SIZE
+mark1                               latest    35c89d3ee564   13 seconds ago   692MB
+vikas3                              latest    b9a40effeeb5   20 hours ago     691MB
+vikassingavarapu/session_4_docker   latest    b9a40effeeb5   20 hours ago     691MB
+mark2                               latest    02e96ccdbb1f   20 hours ago
+
+U can see the docker image is running with MArk1 with tag name latest
+
+Now run the container as we had runned the image
+
+#docker run -p 8003:8000 mark1
+
+1st port is our port and the 2nd port is the docker container will run on 8000 and the mark1 is the image name
+
+* Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.17.0.2:8000
+
+
+ now we has to push this docker image to the docker hub website
+
+step1: Go to https://hub.docker.com/repository/docker/vikassingavarapu/session_4_docker/general
+
+step2: create the repository with any name 
+
+step3: docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+mark1                               latest    35c89d3ee564   7 minutes ago   692MB
+vikas3                              latest    b9a40effeeb5   20 hours ago    691MB
+vikassingavarapu/session_4_docker   latest    b9a40effeeb5   20 hours ago    691MB
+mark2                               latest    02e96ccdbb1f   20 hours ago  
+
+step4:I want to push the mark1 image to the dockerhub with tag having latest
+
+step5:docker image tag mark1:latest vikassingavarapu/session_4_docker:latest 
+
+step6:docker push vikassingavarapu/session_4_docker:latest
+
+u will get message as pushed
+
+
