@@ -69,3 +69,5 @@ CMD ["python", "-m", "flask", "--app", "hello.py", "run", "--host=0.0.0.0", "--p
 #my command would be docker image tag mark2:latest vikassingavarapu/2026_docker:latest 
 #now paste the command showed in dockerhub desktop to push the image to dockerhub
 #docker push vikassingavarapu/2026_docker:tagname
+
+#now anyone can pull the image using the command docker pull vikassingavarapu/2026_docker:latest
